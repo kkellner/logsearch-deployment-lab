@@ -189,23 +189,23 @@
     - az2
     - az3
 
-# Set the cloud foundry DYNAMIC-SERVICES name on all 
+# Set the cloud foundry deployment name on all 
 - type: replace
-  path: /instance_groups/name=smoke-tests/jobs/name=smoke-tests/consumes/cloud_controller/DYNAMIC-SERVICES
+  path: /instance_groups/name=smoke-tests/jobs/name=smoke-tests/consumes/cloud_controller/deployment
   value: cf-94592e9d3e9b4b3cfe16
 
 - type: replace
-  path: /instance_groups/name=create-uaa-client/jobs/name=create-uaa-client/consumes/cloud_controller/DYNAMIC-SERVICES
+  path: /instance_groups/name=create-uaa-client/jobs/name=create-uaa-client/consumes/cloud_controller/deployment
   value: cf-94592e9d3e9b4b3cfe16
 
 - type: replace
-  path: /instance_groups/name=kibana/jobs/name=kibana-auth-plugin/consumes/cloud_controller/DYNAMIC-SERVICES
+  path: /instance_groups/name=kibana/jobs/name=kibana-auth-plugin/consumes/cloud_controller/deployment
   value: cf-94592e9d3e9b4b3cfe16
 
 - type: replace
-  path: /instance_groups/name=ingestor/jobs/name=ingestor_cloudfoundry-firehose/consumes/cloud_controller/DYNAMIC-SERVICES
+  path: /instance_groups/name=ingestor/jobs/name=ingestor_cloudfoundry-firehose/consumes/cloud_controller/deployment
   value: cf-94592e9d3e9b4b3cfe16
 
 - type: replace
-  path: /instance_groups/name=ls-router/jobs/name=route_registrar/consumes/nats/DYNAMIC-SERVICES
+  path: /instance_groups/name=ls-router/jobs/name=route_registrar/consumes/nats/deployment
   value: cf-94592e9d3e9b4b3cfe16
