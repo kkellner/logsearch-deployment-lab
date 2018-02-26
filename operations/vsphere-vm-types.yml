@@ -8,5 +8,9 @@
   value: 
     - name: DEPLOYMENT
 
-
-
+- type: replace
+  path: /instance_groups/name=smoke-tests/azs
+  value: 
+    - az1
+    - az2
+    - az3
