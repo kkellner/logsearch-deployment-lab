@@ -1,6 +1,6 @@
 ---
 - type: replace
-  path: /instance_groups/vm_type
+  path: /instance_groups/*/vm_type
   value: medium
 
 - type: replace
