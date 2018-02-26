@@ -7,7 +7,7 @@
 - type: replace
   path: /instance_groups/name=create-uaa-client/networks
   value: 
-    - name: DEPLOYMENT
+    - name: DYNAMIC-SERVICES
 
 - type: replace
   path: /instance_groups/name=create-uaa-client/azs
@@ -24,7 +24,7 @@
 - type: replace
   path: /instance_groups/name=upload-kibana-objects/networks
   value: 
-    - name: DEPLOYMENT
+    - name: DYNAMIC-SERVICES
 
 - type: replace
   path: /instance_groups/name=upload-kibana-objects/azs
@@ -45,7 +45,7 @@
 - type: replace
   path: /instance_groups/name=elasticsearch_master/networks
   value: 
-    - name: DEPLOYMENT
+    - name: DYNAMIC-SERVICES
 
 - type: replace
   path: /instance_groups/name=elasticsearch_master/azs
@@ -66,7 +66,7 @@
 - type: replace
   path: /instance_groups/name=cluster_monitor/networks
   value: 
-    - name: DEPLOYMENT
+    - name: DYNAMIC-SERVICES
 
 - type: replace
   path: /instance_groups/name=cluster_monitor/azs
@@ -83,7 +83,7 @@
 - type: replace
   path: /instance_groups/name=maintenance/networks
   value: 
-    - name: DEPLOYMENT
+    - name: DYNAMIC-SERVICES
 
 - type: replace
   path: /instance_groups/name=maintenance/azs
@@ -104,7 +104,7 @@
 - type: replace
   path: /instance_groups/name=elasticsearch_data/networks
   value: 
-    - name: DEPLOYMENT
+    - name: DYNAMIC-SERVICES
 
 - type: replace
   path: /instance_groups/name=elasticsearch_data/azs
@@ -125,7 +125,7 @@
 - type: replace
   path: /instance_groups/name=kibana/networks
   value: 
-    - name: DEPLOYMENT
+    - name: DYNAMIC-SERVICES
 
 - type: replace
   path: /instance_groups/name=kibana/azs
@@ -146,7 +146,7 @@
 - type: replace
   path: /instance_groups/name=ingestor/networks
   value: 
-    - name: DEPLOYMENT
+    - name: DYNAMIC-SERVICES
 
 - type: replace
   path: /instance_groups/name=ingestor/azs
@@ -163,7 +163,7 @@
 - type: replace
   path: /instance_groups/name=ls-router/networks
   value: 
-    - name: DEPLOYMENT
+    - name: DYNAMIC-SERVICES
 
 - type: replace
   path: /instance_groups/name=ls-router/azs
@@ -180,7 +180,7 @@
 - type: replace
   path: /instance_groups/name=smoke-tests/networks
   value: 
-    - name: DEPLOYMENT
+    - name: DYNAMIC-SERVICES
 
 - type: replace
   path: /instance_groups/name=smoke-tests/azs
@@ -189,23 +189,23 @@
     - az2
     - az3
 
-# Set the cloud foundry deployment name on all 
+# Set the cloud foundry DYNAMIC-SERVICES name on all 
 - type: replace
-  path: /instance_groups/name=smoke-tests/jobs/name=smoke-tests/consumes/cloud_controller/deployment
+  path: /instance_groups/name=smoke-tests/jobs/name=smoke-tests/consumes/cloud_controller/DYNAMIC-SERVICES
   value: cf-94592e9d3e9b4b3cfe16
 
 - type: replace
-  path: /instance_groups/name=create-uaa-client/jobs/name=create-uaa-client/consumes/cloud_controller/deployment
+  path: /instance_groups/name=create-uaa-client/jobs/name=create-uaa-client/consumes/cloud_controller/DYNAMIC-SERVICES
   value: cf-94592e9d3e9b4b3cfe16
 
 - type: replace
-  path: /instance_groups/name=kibana/jobs/name=kibana-auth-plugin/consumes/cloud_controller/deployment
+  path: /instance_groups/name=kibana/jobs/name=kibana-auth-plugin/consumes/cloud_controller/DYNAMIC-SERVICES
   value: cf-94592e9d3e9b4b3cfe16
 
 - type: replace
-  path: /instance_groups/name=ingestor/jobs/name=ingestor_cloudfoundry-firehose/consumes/cloud_controller/deployment
+  path: /instance_groups/name=ingestor/jobs/name=ingestor_cloudfoundry-firehose/consumes/cloud_controller/DYNAMIC-SERVICES
   value: cf-94592e9d3e9b4b3cfe16
 
 - type: replace
-  path: /instance_groups/name=ls-router/jobs/name=route_registrar/consumes/nats/deployment
+  path: /instance_groups/name=ls-router/jobs/name=route_registrar/consumes/nats/DYNAMIC-SERVICES
   value: cf-94592e9d3e9b4b3cfe16
