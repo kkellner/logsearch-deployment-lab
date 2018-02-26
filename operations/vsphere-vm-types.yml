@@ -39,6 +39,10 @@
   value: medium
 
 - type: replace
+  path: /instance_groups/name=create-uaa-client/persistent_disk_type
+  value: "5120"
+
+- type: replace
   path: /instance_groups/name=elasticsearch_master/networks
   value: 
     - name: DEPLOYMENT
@@ -53,7 +57,11 @@
 # cluster_monitor
 - type: replace
   path: /instance_groups/name=cluster_monitor/vm_type
-  value: medium
+  value: large.cpu
+
+- type: replace
+  path: /instance_groups/name=create-uaa-client/persistent_disk_type
+  value: "102400"
 
 - type: replace
   path: /instance_groups/name=cluster_monitor/networks
@@ -87,7 +95,11 @@
 # elasticsearch_data
 - type: replace
   path: /instance_groups/name=elasticsearch_data/vm_type
-  value: medium
+  value: large.cpu
+
+- type: replace
+  path: /instance_groups/name=create-uaa-client/persistent_disk_type
+  value: "102400"
 
 - type: replace
   path: /instance_groups/name=elasticsearch_data/networks
@@ -104,7 +116,11 @@
 # kibana
 - type: replace
   path: /instance_groups/name=kibana/vm_type
-  value: medium
+  value: large.cpu
+
+- type: replace
+  path: /instance_groups/name=create-uaa-client/persistent_disk_type
+  value: "2048"
 
 - type: replace
   path: /instance_groups/name=kibana/networks
@@ -121,8 +137,12 @@
 # ingestor
 - type: replace
   path: /instance_groups/name=ingestor/vm_type
-  value: medium
+  value: large.cpu
 
+- type: replace
+  path: /instance_groups/name=create-uaa-client/persistent_disk_type
+  value: "2048"
+  
 - type: replace
   path: /instance_groups/name=ingestor/networks
   value: 
