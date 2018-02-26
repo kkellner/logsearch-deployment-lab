@@ -1,6 +1,160 @@
 ---
+# create-uaa-client
 - type: replace
-  path: /instance_groups/name=*/vm_type
+  path: /instance_groups/name=create-uaa-client/vm_type
+  value: medium
+
+- type: replace
+  path: /instance_groups/name=create-uaa-client/networks
+  value: 
+    - name: DEPLOYMENT
+
+- type: replace
+  path: /instance_groups/name=create-uaa-client/azs
+  value: 
+    - az1
+    - az2
+    - az3
+
+# upload-kibana-objects
+- type: replace
+  path: /instance_groups/name=upload-kibana-objects/vm_type
+  value: medium
+
+- type: replace
+  path: /instance_groups/name=upload-kibana-objects/networks
+  value: 
+    - name: DEPLOYMENT
+
+- type: replace
+  path: /instance_groups/name=upload-kibana-objects/azs
+  value: 
+    - az1
+    - az2
+    - az3
+
+# elasticsearch_master
+- type: replace
+  path: /instance_groups/name=elasticsearch_master/vm_type
+  value: medium
+
+- type: replace
+  path: /instance_groups/name=elasticsearch_master/networks
+  value: 
+    - name: DEPLOYMENT
+
+- type: replace
+  path: /instance_groups/name=elasticsearch_master/azs
+  value: 
+    - az1
+    - az2
+    - az3
+
+# cluster_monitor
+- type: replace
+  path: /instance_groups/name=cluster_monitor/vm_type
+  value: medium
+
+- type: replace
+  path: /instance_groups/name=cluster_monitor/networks
+  value: 
+    - name: DEPLOYMENT
+
+- type: replace
+  path: /instance_groups/name=cluster_monitor/azs
+  value: 
+    - az1
+    - az2
+    - az3
+
+# maintenance
+- type: replace
+  path: /instance_groups/name=maintenance/vm_type
+  value: medium
+
+- type: replace
+  path: /instance_groups/name=maintenance/networks
+  value: 
+    - name: DEPLOYMENT
+
+- type: replace
+  path: /instance_groups/name=maintenance/azs
+  value: 
+    - az1
+    - az2
+    - az3
+
+# elasticsearch_data
+- type: replace
+  path: /instance_groups/name=elasticsearch_data/vm_type
+  value: medium
+
+- type: replace
+  path: /instance_groups/name=elasticsearch_data/networks
+  value: 
+    - name: DEPLOYMENT
+
+- type: replace
+  path: /instance_groups/name=elasticsearch_data/azs
+  value: 
+    - az1
+    - az2
+    - az3
+
+# kibana
+- type: replace
+  path: /instance_groups/name=kibana/vm_type
+  value: medium
+
+- type: replace
+  path: /instance_groups/name=kibana/networks
+  value: 
+    - name: DEPLOYMENT
+
+- type: replace
+  path: /instance_groups/name=kibana/azs
+  value: 
+    - az1
+    - az2
+    - az3
+
+# ingestor
+- type: replace
+  path: /instance_groups/name=ingestor/vm_type
+  value: medium
+
+- type: replace
+  path: /instance_groups/name=ingestor/networks
+  value: 
+    - name: DEPLOYMENT
+
+- type: replace
+  path: /instance_groups/name=ingestor/azs
+  value: 
+    - az1
+    - az2
+    - az3
+
+# ls-router
+- type: replace
+  path: /instance_groups/name=ls-router/vm_type
+  value: medium
+
+- type: replace
+  path: /instance_groups/name=ls-router/networks
+  value: 
+    - name: DEPLOYMENT
+
+- type: replace
+  path: /instance_groups/name=ls-router/azs
+  value: 
+    - az1
+    - az2
+    - az3
+
+# smoke-tests
+- type: replace
+  path: /instance_groups/name=smoke-tests/vm_type
   value: medium
 
 - type: replace
@@ -14,3 +168,5 @@
     - az1
     - az2
     - az3
+
+
