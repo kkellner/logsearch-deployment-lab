@@ -2,3 +2,12 @@
 - type: replace
   path: /instance_groups/name=smoke-tests/vm_type
   value: medium
+
+- type: replace
+  path: /instance_groups/name=smoke-tests/networks
+  value: 
+    networks:
+      - name: DEPLOYMENT
+
+
+
