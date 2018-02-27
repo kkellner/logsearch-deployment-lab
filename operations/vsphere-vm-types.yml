@@ -34,7 +34,7 @@
     - az3
 
 - type: replace
-  path: /instance_groups/name=cf-kibana/properties/cloudfoundry/system_org
+  path: /instance_groups/name=cf-kibana/jobs/name=cf-kibana/properties/cloudfoundry/system_org?
   value: system
 
 # redis
