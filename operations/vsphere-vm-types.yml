@@ -33,6 +33,27 @@
     - az2
     - az3
 
+# redis
+- type: replace
+  path: /instance_groups/name=redis/vm_type
+  value: medium
+
+- type: replace
+  path: /instance_groups/name=redis/persistent_disk_type
+  value: "2048"
+
+- type: replace
+  path: /instance_groups/name=redis/networks
+  value: 
+    - name: DYNAMIC-SERVICES
+
+- type: replace
+  path: /instance_groups/name=redis/azs
+  value: 
+    - az1
+    - az2
+    - az3
+
 
 # upload-kibana-objects
 - type: replace
