@@ -33,6 +33,10 @@
     - az2
     - az3
 
+- type: replace
+  path: /instance_groups/name=cf-kibana/cloudfoundry/system_org
+  value: system
+
 # redis
 - type: replace
   path: /instance_groups/name=redis/vm_type
