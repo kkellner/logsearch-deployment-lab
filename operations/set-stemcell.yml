@@ -1,5 +1,6 @@
 # Set the stemcell for logsearch deployment
 - type: replace
   path: /stemcells/alias=default/version
-  value: "3421.42"
+  #value: "3421.42"
   #value: "3421.11"
+  value: "lastest"
