@@ -1,20 +1,38 @@
 ---
 # create-uaa-client
+#- type: replace
+#  path: /instance_groups/name=create-uaa-client/vm_type
+#  value: medium
+#
+#- type: replace
+#  path: /instance_groups/name=create-uaa-client/networks
+#  value: 
+#    - name: DYNAMIC-SERVICES
+#
+#- type: replace
+#  path: /instance_groups/name=create-uaa-client/azs
+#  value: 
+#    - az1
+#    - az2
+#    - az3
+
+# cf-kibana
 - type: replace
-  path: /instance_groups/name=create-uaa-client/vm_type
+  path: /instance_groups/name=cf-kibana/vm_type
   value: medium
 
 - type: replace
-  path: /instance_groups/name=create-uaa-client/networks
+  path: /instance_groups/name=cf-kibana/networks
   value: 
     - name: DYNAMIC-SERVICES
 
 - type: replace
-  path: /instance_groups/name=create-uaa-client/azs
+  path: /instance_groups/name=cf-kibana/azs
   value: 
     - az1
     - az2
     - az3
+
 
 # upload-kibana-objects
 - type: replace
@@ -114,25 +132,25 @@
     - az3
 
 # kibana
-- type: replace
-  path: /instance_groups/name=kibana/vm_type
-  value: large.cpu
-
-- type: replace
-  path: /instance_groups/name=kibana/persistent_disk_type
-  value: "2048"
-
-- type: replace
-  path: /instance_groups/name=kibana/networks
-  value: 
-    - name: DYNAMIC-SERVICES
-
-- type: replace
-  path: /instance_groups/name=kibana/azs
-  value: 
-    - az1
-    - az2
-    - az3
+#- type: replace
+#  path: /instance_groups/name=kibana/vm_type
+#  value: large.cpu
+#
+#- type: replace
+#  path: /instance_groups/name=kibana/persistent_disk_type
+#  value: "2048"
+#
+#- type: replace
+#  path: /instance_groups/name=kibana/networks
+#  value: 
+#    - name: DYNAMIC-SERVICES
+#
+#- type: replace
+#  path: /instance_groups/name=kibana/azs
+#  value: 
+#    - az1
+#    - az2
+#    - az3
 
 # ingestor
 - type: replace
@@ -156,21 +174,21 @@
     - az3
 
 # ls-router
-- type: replace
-  path: /instance_groups/name=ls-router/vm_type
-  value: medium
-
-- type: replace
-  path: /instance_groups/name=ls-router/networks
-  value: 
-    - name: DYNAMIC-SERVICES
-
-- type: replace
-  path: /instance_groups/name=ls-router/azs
-  value: 
-    - az1
-    - az2
-    - az3
+#- type: replace
+#  path: /instance_groups/name=ls-router/vm_type
+#  value: medium
+#
+#- type: replace
+#  path: /instance_groups/name=ls-router/networks
+#  value: 
+#    - name: DYNAMIC-SERVICES
+#
+#- type: replace
+#  path: /instance_groups/name=ls-router/azs
+#  value: 
+#    - az1
+#    - az2
+#    - az3
 
 # smoke-tests
 - type: replace
@@ -194,8 +212,12 @@
   path: /instance_groups/name=smoke-tests/jobs/name=smoke-tests/consumes/cloud_controller/deployment
   value: cf-94592e9d3e9b4b3cfe16
 
+#- type: replace
+#  path: /instance_groups/name=create-uaa-client/jobs/name=create-uaa-client/consumes/cloud_controller/deployment
+#  value: cf-94592e9d3e9b4b3cfe16
+
 - type: replace
-  path: /instance_groups/name=create-uaa-client/jobs/name=create-uaa-client/consumes/cloud_controller/deployment
+  path: /instance_groups/name=cf-kibana/jobs/name=cf-kibana/consumes/cloud_controller/deployment
   value: cf-94592e9d3e9b4b3cfe16
 
 - type: replace
