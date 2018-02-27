@@ -228,6 +228,6 @@
   path: /instance_groups/name=ingestor/jobs/name=ingestor_cloudfoundry-firehose/consumes/cloud_controller/deployment
   value: cf-94592e9d3e9b4b3cfe16
 
-- type: replace
-  path: /instance_groups/name=ls-router/jobs/name=route_registrar/consumes/nats/deployment
-  value: cf-94592e9d3e9b4b3cfe16
+#- type: replace
+#  path: /instance_groups/name=ls-router/jobs/name=route_registrar/consumes/nats/deployment
+#  value: cf-94592e9d3e9b4b3cfe16
