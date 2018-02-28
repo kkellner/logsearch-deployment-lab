@@ -1,14 +1,14 @@
 # Set the release version to use the development release
 - type: replace
   path: /releases/name=logsearch/version
-  value: 208.0.0+dev.1
+  value: "208.0.0+dev.1"
 
 - type: remove
   path: /releases/name=logsearch/version
 
 - type: replace
   path: /releases/name=logsearch-for-cloudfoundry/version
-  value: 206.0.0+dev.1
+  value: "206.0.0+dev.1"
 
 - type: remove
   path: /releases/name=logsearch-for-cloudfoundry/version
