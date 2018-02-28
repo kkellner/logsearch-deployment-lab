@@ -1,4 +1,4 @@
-# Add plugins
+# Configure firehose event types to log
 - type: replace
   path: /instance_groups/name=ingestor/jobs/name=ingestor_cloudfoundry-firehose/properties/cloudfoundry/firehose_events?
   value: 
@@ -8,3 +8,16 @@
     - HttpStartStop
     - LogMessage
     - ValueMetric
+
+
+# Set the reload time of metadata from the cloud controller (org/space/app names)
+- type: replace
+  path: /instance_groups/name=ingestor/jobs/name=ingestor_cloudfoundry-firehose/properties/cloudfoundry/firehose_cc_pull_interval?
+  value: "300s"
+
+# Set subscription ID to be unique
+- type: replace
+  path: /instance_groups/name=ingestor/jobs/name=ingestor_cloudfoundry-firehose/properties/cloudfoundry/firehose_subscription_id?
+  value: logsearch-firehose-sub-id
+
+
