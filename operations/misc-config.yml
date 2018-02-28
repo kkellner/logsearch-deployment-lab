@@ -1,4 +1,10 @@
 # Add plugins
 - type: replace
   path: /instance_groups/name=ingestor/jobs/name=ingestor_cloudfoundry-firehose/properties/cloudfoundry/firehose_events?
-  value: "ContainerMetric, CounterEvent, Error, HttpStartStop, LogMessage, ValueMetric"
+  value: 
+    - ContainerMetric
+    - CounterEvent
+    - Error
+    - HttpStartStop
+    - LogMessage
+    - ValueMetric
