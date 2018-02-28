@@ -4,11 +4,11 @@
   value: "208.0.0+dev.1"
 
 - type: remove
-  path: /releases/name=logsearch/version
+  path: /releases/name=logsearch/url
 
 - type: replace
   path: /releases/name=logsearch-for-cloudfoundry/version
   value: "206.0.0+dev.1"
 
 - type: remove
-  path: /releases/name=logsearch-for-cloudfoundry/version
+  path: /releases/name=logsearch-for-cloudfoundry/url
