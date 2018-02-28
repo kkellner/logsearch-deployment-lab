@@ -9,6 +9,18 @@
     - LogMessage
     - ValueMetric
 
+# Configure firehose event types used to create dashboards 
+- type: replace
+  path: /instance_groups/name=upload-kibana-objects/jobs/name=upload-kibana-objects/properties/cloudfoundry/firehose_events?
+  value: 
+    - ContainerMetric
+    - CounterEvent
+    - Error
+    - HttpStartStop
+    - LogMessage
+    - ValueMetric
+
+
 
 # Set the reload time of metadata from the cloud controller (org/space/app names)
 - type: replace
