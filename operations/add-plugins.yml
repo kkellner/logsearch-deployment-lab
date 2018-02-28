@@ -1,5 +1,5 @@
 # Add plugins
 - type: replace
-  path: /instance_groups/name=cf-kibana/jobs/name=cf-kibana/properties/cf-kibana/plugins/-
+  path: /instance_groups/name=cf-kibana/jobs/name=cf-kibana/properties/cf-kibana/plugins?/-
   value: 
     LogTrail: https://github.com/sivasamyk/logtrail/releases/download/v0.1.23/logtrail-5.6.4-0.1.23.zip
