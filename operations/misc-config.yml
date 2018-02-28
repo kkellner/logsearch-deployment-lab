@@ -11,7 +11,7 @@
 
 # Configure firehose event types used to create dashboards 
 - type: replace
-  path: /instance_groups/name=upload-kibana-objects/jobs/name=upload-kibana-objects/properties/cloudfoundry/firehose_events?
+  path: /instance_groups/name=upload-kibana-objects/jobs/name=upload-kibana-objects/properties?/cloudfoundry?/firehose_events?
   value: 
     - ContainerMetric
     - CounterEvent
